@@ -1,0 +1,9 @@
+- hosts: target
+  tasks:
+  - name: "setup cron"
+    cron: 
+      name: "create log" 
+      minute: "*" 
+      hour: "*" 
+      day: "*"
+      job: "echo 'test' >> /var/log/test.log"
